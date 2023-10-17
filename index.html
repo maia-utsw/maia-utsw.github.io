@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons to Navigate</title>
+    <title>MAIA</title>
     <!-- 引入Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* 设置背景图片 */
+        body {
+            background-color: rgba(255, 255, 255, 0.5); /* 白色半透明背景 */
+            background-blend-mode: overlay; /* 与背景图片叠加 */
+            background-image: url('https://www.utsouthwestern.edu/newsroom/articles/year-2021/assets/cuh-exterior-landscapes.jpg'); /* 占位图片链接，可替换为您的图片URL */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        /* 设置按钮为特别大 */
+        .btn-extra-large {
+            padding: 30px 60px; /* 更大的内边距 */
+            font-size: 30px;    /* 更大的字体 */
+            border-radius: 15px;
+        }
+    </style>
 </head>
-<body class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #f4f4f4;">
+<body class="d-flex justify-content-center align-items-center">
 
 <div class="container text-center">
-    <!-- 使用Bootstrap按钮样式 -->
-    <button onclick="location.href='http://216.128.139.239:5000/'" class="btn btn-primary mb-3">HPC status</button>
+    <!-- 使用Bootstrap按钮样式并应用特别大的样式 -->
+    <button onclick="location.href='http://216.128.139.239:5000/'" class="btn btn-primary btn-extra-large mb-3"> HPC Status </button>
     <br>
-    <button onclick="location.href='http://216.128.139.239:1234/table/2'" class="btn btn-success">MAIA Meeting</button>
+    <button onclick="location.href='http://216.128.139.239:1234/'" class="btn btn-success btn-extra-large">MAIA Meeting</button>
 </div>
 
-<!-- 引入Bootstrap JS和Popper.js，这不是必要的，除非你想使用Bootstrap的JavaScript插件 -->
+<!-- 引入Bootstrap JS和Popper.js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
