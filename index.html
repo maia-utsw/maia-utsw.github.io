@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://huggingface.co/spaces/kenton-li/maia-utsw">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons to Navigate</title>
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-    If you are not redirected, <a href="https://huggingface.co/spaces/kenton-li/maia-utsw">click here</a>.
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #f4f4f4;">
+
+<div class="container text-center">
+    <!-- 使用Bootstrap按钮样式 -->
+    <button onclick="location.href='http://216.128.139.239:5000/'" class="btn btn-primary mb-3">HPC status</button>
+    <br>
+    <button onclick="location.href='http://216.128.139.239:1234/table/2'" class="btn btn-success">MAIA Meeting</button>
+</div>
+
+<!-- 引入Bootstrap JS和Popper.js，这不是必要的，除非你想使用Bootstrap的JavaScript插件 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
