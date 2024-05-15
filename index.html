@@ -6,36 +6,81 @@
     <title>MAIA</title>
     <!-- 引入Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入Animate.css和Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
     <style>
-        /* 设置背景图片 */
+        /* 设置背景图片和运镜效果 */
         body {
-            background-color: rgba(255, 255, 255, 0.5); /* 白色半透明背景 */
+            background-color: rgba(255, 255, 255, 0.2); /* 白色半透明背景 */
             background-blend-mode: overlay; /* 与背景图片叠加 */
-            background-image: url('https://raw.githubusercontent.com/maia-utsw/maia-utsw.github.io/main/maialab.png'); /* 占位图片链接，可替换为您的图片URL */
-            background-size: cover;
-            background-position: center center;
+            background-image: url('https://www.utsouthwestern.edu/departments/radiation-oncology/assets/aroc-exterior.jpg'); /* 占位图片链接，可替换为您的图片URL */
+            background-size: 150% 150%; /* 调整背景图像放大程度 */
+            background-position: 100% 100%;
             background-repeat: no-repeat;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 垂直排列 */
+            overflow: hidden; /* 防止滚动条出现 */
+            animation: background-pan 30s linear infinite alternate; /* 调整动画持续时间 */
         }
-        /* 设置按钮为特别大 */
+
+        /* 背景图像运镜效果 */
+        @keyframes background-pan {
+            0% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* 设置按钮容器的样式 */
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* 增加与logo的间距 */
+        }
+
+        /* 设置按钮为特别大且美观 */
         .btn-extra-large {
-            padding: 30px 60px; /* 更大的内边距 */
-            font-size: 30px;    /* 更大的字体 */
-            border-radius: 15px;
+            padding: 20px 40px; /* 适中的内边距 */
+            font-size: 24px;    /* 适中的字体 */
+            border-radius: 30px; /* 圆角 */
+            margin: 15px;      /* 按钮间距 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.2s, box-shadow 0.2s; /* 添加过渡效果 */
+            border: none;      /* 去掉边框 */
+            color: white;      /* 按钮文字颜色 */
+        }
+        .btn-extra-large:hover {
+            transform: translateY(-5px); /* 悬停时上移 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 悬停时增加阴影 */
+        }
+
+        /* 按钮背景渐变颜色 */
+        .btn-primary {
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* 渐变背景色 */
+        }
+        .btn-success {
+            background: linear-gradient(45deg, #43cea2, #185a9d); /* 渐变背景色 */
+        }
+        .btn-warning {
+            background: linear-gradient(45deg, #f7971e, #ffd200); /* 渐变背景色 */
+        }
+
+        /* 设置logo的动画效果 */
+        .logo {
+            max-width: 500px; /* 根据需要调整logo大小 */
+            margin-bottom: 5px; /* 增加与按钮容器的间距 */
         }
     </style>
 </head>
-<body class="d-flex justify-content-center align-items-center">
+<body>
 
-<div class="container text-center">
-    <!-- 使用Bootstrap按钮样式并应用特别大的样式 -->
-    <br>
-    <button onclick="location.href='https://huggingface.co/spaces/kenton-li/record'" class="btn btn-primary btn-extra-large"> HPC Status </button>
-    <br>
-    <button onclick="location.href='https://huggingface.co/spaces/kenton-li/maia-utsw'" class="btn btn-success btn-extra-large">MAIA Meeting</button>
-    <br>
-    <button onclick="location.href='https://maia-utsw.github.io/hpc_wiki/'" class="btn btn-warning btn-extra-large">HPC Guidance</button>
-    <br>
+<img src="https://raw.githubusercontent.com/maia-utsw/maia-utsw.github.io/main/logo.png" alt="MAIA Logo" class="logo animate__animated animate__fadeInUp animate__delay-0.4s">
+
+<div class="button-container">
+    <button onclick="location.href='https://huggingface.co/spaces/kenton-li/record'" class="btn btn-primary btn-extra-large hvr-float animate__animated animate__fadeInUp animate__delay-0.5s">HPC Status</button>
+    <button onclick="location.href='https://huggingface.co/spaces/kenton-li/maia-utsw'" class="btn btn-success btn-extra-large hvr-float animate__animated animate__fadeInUp animate__delay-0.5s">MAIA Meeting</button>
+    <button onclick="location.href='https://maia-utsw.github.io/hpc_wiki/'" class="btn btn-warning btn-extra-large hvr-float animate__animated animate__fadeInUp animate__delay-0.5s">HPC Guidance</button>
 </div>
 
 <!-- 引入Bootstrap JS和Popper.js -->
